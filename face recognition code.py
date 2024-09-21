@@ -11,9 +11,6 @@ from xlutils.copy import copy as xl_copy
 CurrentFolder = os.getcwd() #Read current folder path
 image1 = CurrentFolder+'\\sayan.png'
 image2 = CurrentFolder+'\\sougata.png'
-image3 = CurrentFolder+'\\shreya.png'
-image4 = CurrentFolder+'\\spandan.png'
-# image5 = CurrentFolder+'\\spandan.png'
 
 
 
@@ -39,33 +36,15 @@ person2_name = "sougata"
 person2_image = face_recognition.load_image_file(image2)
 person2_face_encoding = face_recognition.face_encodings(person2_image)[0]
 
-person3_name = "shreya"
-person3_image = face_recognition.load_image_file(image3)
-person3_face_encoding = face_recognition.face_encodings(person3_image)[0]
 
-
-person4_name = "spandan"
-person4_image = face_recognition.load_image_file(image4)
-person4_face_encoding = face_recognition.face_encodings(person4_image)[0]
-
-
-# person5_name = "spandan"
-# person5_image = face_recognition.load_image_file(image5)
-# person5_face_encoding = face_recognition.face_encodings(person5_image)[0]
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     person1_face_encoding,
-    person2_face_encoding,
-    person3_face_encoding,
-    person4_face_encoding
-    # person5_face_encoding
+    person2_face_encoding
 ]
 known_face_names = [
     person1_name,
-    person2_name,
-    person3_name,
-    person4_name
-    # person5_name
+    person2_name
 ]
 
 # Initialize some variables
